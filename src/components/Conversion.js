@@ -15,10 +15,12 @@ class Conversion extends Component {
       });
     }
     return (
-      <div className="Conversion container-fluid">
-        {headers}
-        {paragraphs}
-        <button type="button" className="btn btn-primary btn-lg">JOIN</button>
+      <div className="ConversionContainer">
+        <div className="Conversion container-fluid">
+          {headers}
+          {paragraphs}
+          <button type="button" className="btn btn-primary btn-lg">JOIN</button>
+        </div>
       </div>
     );
   }

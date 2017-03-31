@@ -23,7 +23,7 @@ class Gallery extends Component {
       });
     }
     return (
-      <div>
+      <div className="GalleryContainer">
         <div className="Gallery container-fluid">
           <div className="row">
             <div className="col-md-1">

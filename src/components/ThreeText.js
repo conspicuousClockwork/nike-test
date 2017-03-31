@@ -10,9 +10,11 @@ class ThreeText extends Component {
       });
     }
     return (
-      <div className="ThreeText container-fluid">
-        <div className="row">
-        {textBoxes}
+      <div className="InfoContainer">
+        <div className="ThreeText container-fluid">
+          <div className="row">
+          {textBoxes}
+          </div>
         </div>
       </div>
     );

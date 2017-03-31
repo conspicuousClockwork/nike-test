@@ -193,18 +193,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header header={this.state.header} />
-        <div className="HeroContainer">
           <Hero hero={this.state.hero} />
-        </div>
-        <div className="InfoContainer">
           <ThreeText info={this.state.info} />
-        </div>
-        <div className="GalleryContainer">
           <Gallery gallery={this.state.gallery} changeImages={this.handleChangeImages.bind(this)}/>
-        </div>
-        <div className="ConversionContainer">
           <Conversion conversion={this.state.conversion}/>
-        </div>
         <footer>
           <div className="col-xs-12"><br /></div>
           <NikeFooter footer={this.state.footer}/>
