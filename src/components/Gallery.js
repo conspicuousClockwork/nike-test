@@ -24,7 +24,7 @@ class Gallery extends Component {
     let previewSelects;
     if (this.props.gallery.images) {
       previewSelects = this.props.gallery.images.map(image => {
-        return (<GalleryPreviewSelect images={image} selected={this.state.selected} changeImages={this.handleUpdatePreview.bind(this)}/>);
+        return (<GalleryPreviewSelect image={image} selected={this.state.selected} changeImages={this.handleUpdatePreview.bind(this)}/>);
       });
     }
     return (

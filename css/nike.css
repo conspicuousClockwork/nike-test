@@ -112,30 +112,19 @@ footer a {
 .Hero img {
   height: 100px;
 }
-.GalleryPreviewSelect {
+
+.GalleryPreviewSelect, .Visible {
   width: 125px;
   height: 110;
   padding: 10px;
   text-align: center;
   margin-top: 75px;
   margin-bottom: 75px;
+}
+
+.Visible {
   border: 2px solid #A3D359;
   border-radius: 3px;
-}
-
-.GalleryPreviewSelect {
-  width: 125px;
-  height: 110;
-  padding: 10px;
-  text-align: center;
-  margin-top: 75px;
-  margin-bottom: 75px;
-  border: 0px solid #A3D359;
-  border-radius: 3px;
-}
-
-.GalleryPreviewSelect.Visible {
-  border-width: 2px;
 }
 
 .GalleryPreviewSelect h5 {
