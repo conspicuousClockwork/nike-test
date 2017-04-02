@@ -10,11 +10,11 @@ class NikeFooter extends Component {
     }
     return (
       <footer>
-      <div className="NikeFooter container-fluid">
-      <div className="row">
-        {columns}
-      </div>
-      </div>
+        <div className="NikeFooter container-fluid">
+          <div className="row">
+            {columns}
+          </div>
+        </div>
       </footer>
     );
   }
