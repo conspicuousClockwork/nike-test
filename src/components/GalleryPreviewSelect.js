@@ -1,29 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
-const styles = StyleSheet.create({
-    red: {
-        backgroundColor: 'red'
-    },
-
-    blue: {
-        backgroundColor: 'blue'
-    },
-
-    hover: {
-        ':hover': {
-            backgroundColor: 'red'
-        }
-    },
-
-    small: {
-        '@media (max-width: 600px)': {
-            backgroundColor: 'red',
-        }
-    }
-});
-
-
 class GalleryPreviewSelect extends Component {
   constructor(){
     super();
@@ -49,7 +26,7 @@ class GalleryPreviewSelect extends Component {
   render() {
 
     return (
-      <div className={css(this.state.visible ? styles.red : styles.blue)} onClick={this.onClick.bind(this)}>
+      <div onClick={this.onClick.bind(this)}>
         <img src={this.props.image[0]} alt="MERCURIAL"/>
       </div>
     );
