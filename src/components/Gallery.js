@@ -11,13 +11,13 @@ class Gallery extends Component {
     }
   }
 
-  handleUpdatePreview(selection){
-    this.setState({selected:selection}, function(){
-    });
-  }
-
   componentWillMount() {
     this.setState({selected:this.props.gallery.images[0][2]});
+  }
+
+
+  handleUpdatePreview(selection){
+    this.setState({selected:selection});
   }
 
   render() {
