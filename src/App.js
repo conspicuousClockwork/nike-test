@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/logo.svg';
 import bottom from '../assets/images/bottom-view.png';
 import left from '../assets/images/left-view.png';
 import right from '../assets/images/right-view.png';
