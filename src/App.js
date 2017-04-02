@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from '../assets/images/logo.svg';
 import bottom from '../assets/images/bottom-view.png';
 import left from '../assets/images/left-view.png';
 import right from '../assets/images/right-view.png';
@@ -182,25 +183,15 @@ class App extends Component {
     });
   }
 
-  handleChangeImages(selection){
-    let gallery = this.state.gallery;
-    gallery.selected = selection[2];
-    this.setState({gallery:gallery});
-
-  }
-
   render() {
     return (
       <div className="App">
-        <Header header={this.state.header} />
+        <Header header={this.state.header} logo={logo}/>
           <Hero hero={this.state.hero} />
           <ThreeText info={this.state.info} />
-          <Gallery gallery={this.state.gallery} changeImages={this.handleChangeImages.bind(this)}/>
+          <Gallery gallery={this.state.gallery}/>
           <Conversion conversion={this.state.conversion}/>
-        <footer>
-          <div className="col-xs-12"><br /></div>
           <NikeFooter footer={this.state.footer}/>
-        </ footer>
       </div>
     );
   }

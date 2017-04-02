@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../../assets/images/logo.svg';
 class Header extends Component {
+
   render() {
     let navs;
     if (this.props.header.nav) {
@@ -13,7 +13,7 @@ class Header extends Component {
         <div className="container-fluid">
           <div className="brandContainer col-md-2">
             <div className="navbar-header">
-              <a className="navbar-brand" href="#"><img src={logo} alt="Nike Logo"/></a>
+              <a className="navbar-brand" href="#"><img src={this.props.logo} alt="Nike Logo"/></a>
             </div>
           </div>
           <div>

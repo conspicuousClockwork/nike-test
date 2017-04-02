@@ -7,20 +7,14 @@ class GalleryPreviewSelect extends Component {
       selected: []
     }
   }
-  componentWillMount(){
-    if (this.props.selected === this.props.images[2]){
-      console.log('Yes');
-      this.setState({visible:"GalleryPreviewSelect visible"});
-      console.log(this.state.visible);
-    }
-  }
   render() {
 
     function handleClick(e) {
       e.preventDefault();
       this.setState({selected:
-          this.props.images
+          this.props.images[2]
       }, function (){
+        console.log(this.state.selected + "YO");
         this.props.changeImages(this.state.selected);
       });
     }

@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 import GalleryPreview from './GalleryPreview'
 import GalleryPreviewSelect from './GalleryPreviewSelect'
 import ThreeText from './ThreeText'
+
 class Gallery extends Component {
   constructor(){
     super();
-    this.state = {
-      selected : []
-    }
   }
-  handleChangeImages(selection){
-    this.setState({selected:selection}, function(){
-      this.props.changeImages(this.state.selected);
-    });
 
+  handleUpdatePreview(selection){
+    console.log(selection);
+    this.setState({selected:selection[2]}, function(){
+      console.log(this.state.selected);
+      console.log('yooeoeo');
+    });
   }
+
+  componentWillMount() {
+    this.setState({selected:this.props.gallery.images[0][2]});
+  }
+
   render() {
     let previewSelects;
     if (this.props.gallery.images) {
       previewSelects = this.props.gallery.images.map(image => {
-        return (<GalleryPreviewSelect images={image} selected={this.props.gallery.selected} changeImages={this.handleChangeImages.bind(this)}/>);
+        return (<GalleryPreviewSelect images={image} selected={this.state.selected} changeImages={this.handleUpdatePreview.bind(this)}/>);
       });
     }
     return (
@@ -33,7 +38,7 @@ class Gallery extends Component {
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-7">
-              <GalleryPreview image={[this.props.gallery.images[this.props.gallery.selected][1]]} />
+              <GalleryPreview image={this.props.gallery.images[this.state.selected][1]} />
             </div>
           </div>
         </div>
