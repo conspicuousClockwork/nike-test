@@ -6,14 +6,14 @@ class ThreeText extends Component {
     let textBoxes;
     if (this.props.info) {
       textBoxes = this.props.info.map(info => {
-              return (<TextBox info={info} />);
+        return (<TextBox info={info} />);
       });
     }
     return (
       <div className="InfoContainer">
         <div className="ThreeText container-fluid">
           <div className="row">
-          {textBoxes}
+            {textBoxes}
           </div>
         </div>
       </div>
