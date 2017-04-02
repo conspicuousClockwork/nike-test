@@ -74,7 +74,8 @@ footer a {
 
 .HeroContainer {
   position: relative;
-  height: 70em;
+  padding-top: 200px;
+  padding-bottom: 200px;
   color: #666;
   background-image: url('../assets/images/content-1-bg.png');
   background-color: #1B1D20;
@@ -85,7 +86,6 @@ footer a {
 
 @media (max-width: 800px) {
   .HeroContainer {
-    height: 40em;
     background-image: none;
   }
 }
