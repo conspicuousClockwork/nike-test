@@ -14,7 +14,6 @@ class GalleryPreviewSelect extends Component {
       this.setState({selected:
           this.props.images[2]
       }, function (){
-        console.log(this.state.selected + "YO");
         this.props.changeImages(this.state.selected);
       });
     }

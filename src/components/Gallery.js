@@ -6,13 +6,13 @@ import ThreeText from './ThreeText'
 class Gallery extends Component {
   constructor(){
     super();
+    this.state = {
+      selected: 0
+    }
   }
 
   handleUpdatePreview(selection){
-    console.log(selection);
-    this.setState({selected:selection[2]}, function(){
-      console.log(this.state.selected);
-      console.log('yooeoeo');
+    this.setState({selected:selection}, function(){
     });
   }
 

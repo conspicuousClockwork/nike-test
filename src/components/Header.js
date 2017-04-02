@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from './Logo'
 class Header extends Component {
 
   render() {
@@ -13,7 +14,7 @@ class Header extends Component {
         <div className="container-fluid">
           <div className="brandContainer col-md-2">
             <div className="navbar-header">
-              <a className="navbar-brand" href="#"><img src={this.props.logo} alt="Nike Logo"/></a>
+              <a className="navbar-brand" href="#"><Logo /></a>
             </div>
           </div>
           <div>

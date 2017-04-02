@@ -186,7 +186,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header header={this.state.header} logo={logo}/>
+        <Header header={this.state.header}/>
           <Hero hero={this.state.hero} />
           <ThreeText info={this.state.info} />
           <Gallery gallery={this.state.gallery}/>
