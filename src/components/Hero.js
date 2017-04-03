@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     container: {
       fontWeight: 'bold',
       width: '100%',
+      maxWidth: '100%',
       minHeight: '50vw',
       justifyContent: 'center',
       flexDirection: 'column',
       color: '#A4D35A',
       alignItems: 'center',
-      padding: '3em',
       display: 'flex',
       marginBottom: '0em',
       marginTop: '0em',
@@ -39,10 +39,13 @@ const styles = StyleSheet.create({
       }
     },
     title: {
-      fontSize: '5em',
+      fontSize: '5vw',
+      marginBottom: 0,
       fontWeight: 'bold'
     },
     text: {
+      color: 'white',
+      fontSize: '3vw',
       fontWeight: 'bold'
     }
 });

@@ -7,7 +7,7 @@ class Conversion extends Component {
     let paragraphs;
     if (this.props.conversion.headers) {
       headers = this.props.conversion.headers.map(header => {
-        return (<h4>{header}</h4>);
+        return (<h1>{header}</h1>);
       });
     }
     if (this.props.conversion.paragraphs) {
