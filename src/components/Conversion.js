@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StyleSheet, css } from 'aphrodite';
 
 class Conversion extends Component {
   render() {
@@ -11,19 +12,56 @@ class Conversion extends Component {
     }
     if (this.props.conversion.paragraphs) {
       paragraphs = this.props.conversion.paragraphs.map(paragraph => {
-        return (<p>{paragraph}</p>);
+        return (<p className={css(styles.text)}>{paragraph}</p>);
       });
     }
     return (
-      <div className="ConversionContainer">
-        <div className="Conversion container-fluid">
-          {headers}
+      <div className={css(styles.container)}>
+        <div className={css(styles.innerContainer)}>
+          <span className={css(styles.text)}>
+            {headers}
+          </span>
           {paragraphs}
-          <button type="button" className="btn btn-primary btn-lg">JOIN</button>
+          <button type="button" className={css(styles.button)}><h3>JOIN</h3></button>
         </div>
       </div>
     );
   }
 }
+
+const styles = StyleSheet.create({
+    container: {
+      backgroundColor: '#A4D35A',
+      width: '100%',
+      justifyContent: 'center',
+      paddingTop: '3em',
+      paddingBottom: '3em',
+      display: 'flex'
+    },
+    innerContainer: {
+      color: 'white',
+      margin: '1em',
+      flexDirection: 'column',
+      width: '75%',
+      display: 'flex',
+      padding: '1em'
+    },
+    text: {
+      marginBottom: '2em'
+    },
+    button: {
+      width: '25%',
+      padding: 0,
+      display: 'flex',
+      backgroundColor: 'white',
+      justifyContent: 'center',
+      borderColor: 'transparent',
+      borderRadius: '4px',
+      color: '#A4D35A',
+      '@media (max-width: 1000px)': {
+        width: '100%'
+      }
+    }
+});
 
 export default Conversion;
