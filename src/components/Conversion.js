@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
       display: 'flex',
       backgroundColor: 'white',
       justifyContent: 'center',
+      textAlign: 'center',
       borderColor: 'transparent',
       borderRadius: '4px',
       color: '#A4D35A',
