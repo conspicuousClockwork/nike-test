@@ -43,9 +43,8 @@ const styles = StyleSheet.create({
       backgroundSize: 'contain',
       backgroundColor: '#27292B',
       '@media (max-width: 1000px)': {
-        alignSelf: 'auto',
-        width: '75vw',
-        height: '75vw'
+        flexDirection: 'column-reverse',
+        alignItems: 'center'
       }
     }
 });
