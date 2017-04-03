@@ -11,7 +11,6 @@ import Gallery from './components/Gallery'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ThreeText from './components/ThreeText'
-import '../css/bootstrap.min.css';
 import '../css/nike.css';
 
 
@@ -189,6 +188,7 @@ class App extends Component {
           <Hero hero={this.state.hero} />
           <ThreeText info={this.state.info} />
           <Gallery gallery={this.state.gallery}/>
+          <ThreeText info={this.state.gallery.info} />
           <Conversion conversion={this.state.conversion}/>
           <NikeFooter footer={this.state.footer}/>
       </div>

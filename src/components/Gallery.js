@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { StyleSheet, css } from 'aphrodite';
 import GalleryPreview from './GalleryPreview'
 import GalleryPreviewSelect from './GalleryPreviewSelect'
 import ThreeText from './ThreeText'
+import background from '../../assets/images/content-2-bg.png'
 
 class Gallery extends Component {
   constructor(){
@@ -21,31 +23,30 @@ class Gallery extends Component {
   }
 
   render() {
-    let previewSelects;
-    if (this.props.gallery.images) {
-      previewSelects = this.props.gallery.images.map(image => {
-        return (<GalleryPreviewSelect image={image} selected={this.state.selected} changeImages={this.handleUpdatePreview.bind(this)}/>);
-      });
-    }
     return (
-      <div className="GalleryContainer">
-        <div className="Gallery container-fluid">
-          <div className="row">
-            <div className="col-md-1">
-              <h5>{this.props.gallery.subTitle}</h5>
-              <h4>{this.props.gallery.title}</h4>
-              {previewSelects}
-            </div>
-            <div className="col-md-1"></div>
-            <div className="col-md-7">
-              <GalleryPreview image={this.props.gallery.images[this.state.selected][1]} />
-            </div>
-          </div>
-        </div>
-        <ThreeText info={this.props.gallery.info} />
+      <div className={css(styles.container)}>
+        <GalleryPreviewSelect selectImage={this.handleUpdatePreview.bind(this)} selected={this.state.selected} gallery={this.props.gallery}/>
+        <GalleryPreview image={this.props.gallery.images[this.state.selected][1]} />
       </div>
     );
   }
 }
+
+const styles = StyleSheet.create({
+    container: {
+      width: '100%',
+      justifyContent: 'center',
+      display: 'flex',
+      backgroundImage: 'url('+background+')',
+      backgroundPosition: 'right',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'contain',
+      backgroundColor: '#27292B',
+      '@media (max-width: 1000px)': {
+        flexDirection: 'column-reverse',
+        alignItems: 'center'
+      }
+    }
+});
 
 export default Gallery;

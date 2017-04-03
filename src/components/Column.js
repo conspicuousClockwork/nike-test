@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { StyleSheet, css } from 'aphrodite';
 class Column extends Component {
   render() {
     let links;
@@ -9,12 +9,31 @@ class Column extends Component {
       });
     }
     return (
-      <div className='FooterColumn col-md-3'>
-        <h5 className='title'>{this.props.column.title}</h5>
+      <div className={css(styles.container)}>
+        <h5 className={css(styles.bold)}>{this.props.column.title}</h5>
         {links}
       </div>
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+      fontWeight: 'bold',
+      color: '#333',
+      width: '15vw',
+      justifyContent: 'flex-start',
+      display: 'flex',
+      flexDirection: 'column',
+      '@media (max-width: 1000px)': {
+        width: 'auto',
+        textAlign: 'center'
+      }
+    },
+    bold: {
+      fontWeight: 'bold'
+    }
+});
 
 export default Column;

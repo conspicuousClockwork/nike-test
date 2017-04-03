@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { StyleSheet, css } from 'aphrodite';
 import TextBox from './TextBox'
-
 class ThreeText extends Component {
   render() {
     let textBoxes;
@@ -10,15 +10,34 @@ class ThreeText extends Component {
       });
     }
     return (
-      <div className="InfoContainer">
-        <div className="ThreeText container-fluid">
-          <div className="row">
-            {textBoxes}
-          </div>
+      <div className={css(styles.container)}>
+        <div className={css(styles.innerContainer)}>
+          {textBoxes}
         </div>
       </div>
     );
   }
 }
+
+const styles = StyleSheet.create({
+    container: {
+      width: '100%',
+      justifyContent: 'center',
+      marginTop: '3em',
+      marginBottom: '3em',
+      display: 'flex'
+    },
+    innerContainer: {
+      width: '75%',
+      justifyContent: 'space-between',
+      alignItems: 'flex-end',
+      display: 'flex',
+      '@media (max-width: 1000px)': {
+        flexDirection: 'column-reverse',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
+    }
+});
 
 export default ThreeText;
