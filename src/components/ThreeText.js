@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TextBox from './TextBox'
 import { StyleSheet, css } from 'aphrodite';
+import TextBox from './TextBox'
 class ThreeText extends Component {
   render() {
     let textBoxes;
