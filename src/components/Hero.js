@@ -7,8 +7,8 @@ class Hero extends Component {
     return (
       <div className={css(styles.container)}>
           <Logo color="#A4D35A"/>
-          <h1>{this.props.hero.title}</h1>
-          <h2>{this.props.hero.text}</h2>
+          <h1 className={css(styles.title)}>{this.props.hero.title}</h1>
+          <h2 className={css(styles.text)}>{this.props.hero.text}</h2>
       </div>
     );
   }
@@ -16,6 +16,7 @@ class Hero extends Component {
 
 const styles = StyleSheet.create({
     container: {
+      fontWeight: 'bold',
       width: '100%',
       minHeight: '50vw',
       justifyContent: 'center',
@@ -34,10 +35,15 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       '@media (max-width: 1000px)': {
         backgroundSize: 'auto'
+
       }
     },
+    title: {
+      fontSize: '5em',
+      fontWeight: 'bold'
+    },
     text: {
-      marginBottom: '2em'
+      fontWeight: 'bold'
     }
 });
 

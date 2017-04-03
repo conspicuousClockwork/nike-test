@@ -68,9 +68,12 @@ const styles = StyleSheet.create({
     },
     brand: {
       display: 'flex',
-      width: '25%',
+      width: '30%',
       justifyContent: 'center',
-      backgroundColor: '#A4D35A'
+      backgroundColor: '#A4D35A',
+      '@media (max-width: 1000px)': {
+        width: '100%'
+      }
     },
     nav: {
       marginLeft: '10em',

@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
       display: 'flex'
     },
     innerContainer: {
+      fontWeight: 'bold',
       color: 'white',
       margin: '1em',
       flexDirection: 'column',

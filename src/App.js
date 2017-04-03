@@ -11,7 +11,6 @@ import Gallery from './components/Gallery'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import ThreeText from './components/ThreeText'
-import '../css/bootstrap.min.css';
 import '../css/nike.css';
 
 

@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
       display: 'flex',
       '@media (max-width: 1000px)': {
         flexDirection: 'column-reverse',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
       }
     }
 });

@@ -13,9 +13,10 @@ class Logo extends Component {
 
 const styles = StyleSheet.create({
     logo: {
-      minHeight: '5em',
-      maxHeight: '10em',
-      width: '50%'
+      minHeight: '7em',
+      maxHeight: '7em',
+      padding: '1em',
+      width: '75%'
     }
 });
 
