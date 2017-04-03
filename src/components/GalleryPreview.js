@@ -5,7 +5,7 @@ class GalleryPreviewSelect extends Component {
   render() {
     return (
       <div className={css(styles.container)}>
-        <img src={this.props.image} className="PreviewImg" alt="MERCURIAL"/>
+        <img src={this.props.image} className={css(styles.preview)} alt="MERCURIAL"/>
       </div>
     );
   }
