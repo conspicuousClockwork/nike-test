@@ -25,7 +25,7 @@ class GalleryPreviewSelect extends Component {
     let previewSelects;
     if (this.props.gallery.images) {
       previewSelects = this.props.gallery.images.map(image => {
-        return (<div className={css(image[2] === this.state.selected[0] ? styles.active : styles.inactive,styles.choice)} onClick={this.onClick.bind(this,[image[2]])}><img src={image[0]}/></div>);
+        return (<div className={css(image[2] === this.state.selected[0] ? styles.active : styles.inactive,styles.choice)} onClick={this.onClick.bind(this,[image[2]])}><img className={css(styles.preview)} src={image[0]}/></div>);
       });
     }
     return (
@@ -95,6 +95,11 @@ const styles = StyleSheet.create({
           flexDirection: 'row',
           alignItems: 'center'
         }
+    },
+    preview: {
+      maxWidth: '50%',
+      minWidth: '50%',
+      maxHeight: '100%'
     }
 });
 
