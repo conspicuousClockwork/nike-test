@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     preview: {
       maxWidth: '80%',
       minWidth: '80%',
-      max-height: '100%'
+      maxHeight: '100%'
     }
 });
 
