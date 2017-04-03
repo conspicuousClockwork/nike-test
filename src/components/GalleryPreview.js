@@ -29,6 +29,12 @@ const styles = StyleSheet.create({
         width: '75vw',
         height: '75vw'
       }
+    },
+
+    preview: {
+      maxWidth: '80%',
+      minWidth: '80%',
+      max-height: '100%'
     }
 });
 
