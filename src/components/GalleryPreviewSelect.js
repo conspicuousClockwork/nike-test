@@ -62,13 +62,12 @@ const styles = StyleSheet.create({
       width: '100%',
       padding: '5px',
       marginTop: '10px',
-      marginLeft: '10px',
+      marginLeft: '0px',
       marginBottom: '10px',
       marginRight: '0px',
-      alignContent: 'center',
       justifyContent: 'center',
       alignItems: 'flex-end',
-      height: '5em',
+      height: '6em',
       '@media (max-width: 1000px)': {
           alignItems: 'center'
       }
@@ -97,8 +96,7 @@ const styles = StyleSheet.create({
         }
     },
     preview: {
-      maxWidth: '50%',
-      minWidth: '50%',
+      maxWidth: '100%',
       maxHeight: '100%'
     }
 });
