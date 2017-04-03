@@ -6,7 +6,7 @@ class Hero extends Component {
   render() {
     return (
       <div className={css(styles.container)}>
-          <Logo/>
+          <Logo color="#A4D35A"/>
           <h1>{this.props.hero.title}</h1>
           <h2>{this.props.hero.text}</h2>
       </div>
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
       minHeight: '50vw',
       justifyContent: 'center',
       flexDirection: 'column',
-      color: 'white',
+      color: '#A4D35A',
       alignItems: 'center',
       padding: '3em',
       display: 'flex',
