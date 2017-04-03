@@ -57,24 +57,23 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       display: 'flex',
       backgroundColor: '#27292B',
-      '@media (max-width: 1000px)': {
-      }
     },
     innerContainer: {
-      backgroundColor: '#999',
-      height: '100%',
+      width: '100%',
       color: 'white',
       flexDirection: 'row',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       alignItems: 'center',
       display: 'flex',
     },
     brand: {
       display: 'flex',
+      width: '25%',
       justifyContent: 'center',
       backgroundColor: '#A4D35A'
     },
     nav: {
+      marginLeft: '10em',
       '@media (max-width: 1000px)': {
         display: 'none'
       }
@@ -82,14 +81,12 @@ const styles = StyleSheet.create({
     mobileNav: {
       transition: 'all 2s',
       width: '100%',
-      height: 'auto',
       padding: '2em',
       justifyContent: 'space-between',
       flexDirection: 'column',
       color: '#A4D35A',
       alignItems: 'center',
       display: 'flex',
-      backgroundColor: '#27292B',
       '@media (min-width: 1000px)': {
         display: 'none'
       }
@@ -102,8 +99,7 @@ const styles = StyleSheet.create({
     link: {
       margin: '1em',
       color: 'white',
-      fontSize: '2em',
-      backgroundColor: 'black',
+      fontSize: '1.2em',
       ':link': {
           textDecoration: 'none'
       },
@@ -111,6 +107,7 @@ const styles = StyleSheet.create({
           textDecoration: 'none'
       },
       ':hover': {
+          color: '#A4D35A',
           textDecoration: 'none'
       },
       ':active': {
