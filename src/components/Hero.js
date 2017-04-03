@@ -31,18 +31,10 @@ const styles = StyleSheet.create({
       backgroundRepeat: 'no-repeat',
       backgroundSize: '100%',
       backgroundColor: '#27292B',
+      textAlign: 'center',
       '@media (max-width: 1000px)': {
         backgroundSize: 'auto'
       }
-    },
-    innerContainer: {
-      backgroundSize: '100%',
-      color: 'white',
-      margin: '1em',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      display: 'flex',
     },
     text: {
       marginBottom: '2em'
