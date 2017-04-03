@@ -21,28 +21,10 @@ class Gallery extends Component {
   }
 
   render() {
-    let previewSelects;
-    if (this.props.gallery.images) {
-      previewSelects = this.props.gallery.images.map(image => {
-        return (<GalleryPreviewSelect image={image} selected={this.state.selected} changeImages={this.handleUpdatePreview.bind(this)}/>);
-      });
-    }
     return (
       <div className="GalleryContainer">
-        <div className="Gallery container-fluid">
-          <div className="row">
-            <div className="col-md-1">
-              <h5>{this.props.gallery.subTitle}</h5>
-              <h4>{this.props.gallery.title}</h4>
-              {previewSelects}
-            </div>
-            <div className="col-md-1"></div>
-            <div className="col-md-7">
-              <GalleryPreview image={this.props.gallery.images[this.state.selected][1]} />
-            </div>
-          </div>
-        </div>
-        <ThreeText info={this.props.gallery.info} />
+        <GalleryPreviewSelect selectImage={this.handleUpdatePreview.bind(this)} selected={this.state.selected} gallery={this.props.gallery}/>
+        <GalleryPreview image={this.props.gallery.images[this.state.selected][1]} />
       </div>
     );
   }

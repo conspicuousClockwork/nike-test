@@ -10,21 +10,33 @@ class GalleryPreviewSelect extends Component {
     }
   }
 
-  onClick() {
+  onClick(id) {
     this.setState({
       visible: true,
-      selected: this.props.image[2]
+      selected: id
 
     }, function (){
-      this.props.changeImages(this.props.image[2]);
+      console.log(this.state.selected)
+      this.props.selectImage(id);
     });
   }
 
   render() {
-
+    let previewSelects;
+    if (this.props.gallery.images) {
+      previewSelects = this.props.gallery.images.map(image => {
+        return (<div className={css(image[2] === this.state.selected[0] ? styles.red : styles.blue)} onClick={this.onClick.bind(this,[image[2]])}><img src={image[0]}/></div>);
+      });
+    }
     return (
-      <div className={css(this.props.image[2] === this.props.selected ? styles.red : styles.blue)} onClick={this.onClick.bind(this)}>
-        <img src={this.props.image[0]} alt="MERCURIAL"/>
+      <div>
+        <div>
+          <h4>{this.props.gallery.subTitle}</h4>
+          <h3>{this.props.gallery.title}</h3>
+        </div>
+        <div>
+          {previewSelects}
+        </div>
       </div>
     );
   }
