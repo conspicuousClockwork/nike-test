@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       width: '40vw',
       height: '40vw',
-      backgroundImage: 'url(react/nike-test/assets/images/circle-bg.png)',
+      backgroundImage: 'url(' + background + ')',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '90%',
       backgroundPosition: 'center',
