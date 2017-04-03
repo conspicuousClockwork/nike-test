@@ -189,6 +189,7 @@ class App extends Component {
           <Hero hero={this.state.hero} />
           <ThreeText info={this.state.info} />
           <Gallery gallery={this.state.gallery}/>
+          <ThreeText info={this.state.gallery.info} />
           <Conversion conversion={this.state.conversion}/>
           <NikeFooter footer={this.state.footer}/>
       </div>
