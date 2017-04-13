@@ -13,19 +13,17 @@ class Gallery extends Component {
     }
   }
 
-  componentWillMount() {
-    this.setState({selected:this.props.gallery.images[0][2]});
-  }
 
 
-  handleUpdatePreview(selection){
-    this.setState({selected:selection});
+
+  handleUpdatePreview(newSelection){
+    this.setState({selected:newSelection});
   }
 
   render() {
     return (
       <div className={css(styles.container)}>
-        <GalleryPreviewSelect selectImage={this.handleUpdatePreview.bind(this)} selected={this.state.selected} gallery={this.props.gallery}/>
+        <GalleryPreviewSelect selectImage={this.handleUpdatePreview.bind(this)} gallery={this.props.gallery}/>
         <GalleryPreview image={this.props.gallery.images[this.state.selected][1]} />
       </div>
     );

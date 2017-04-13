@@ -5,18 +5,14 @@ class GalleryPreviewSelect extends Component {
   constructor(){
     super();
     this.state = {
-      visible: false,
       selected: [0]
     }
   }
 
   onClick(id) {
     this.setState({
-      visible: true,
       selected: id
-
     }, function (){
-      console.log(this.state.selected)
       this.props.selectImage(id);
     });
   }
