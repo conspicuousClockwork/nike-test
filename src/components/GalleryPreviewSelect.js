@@ -2,28 +2,30 @@ import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
 class GalleryPreviewSelect extends Component {
-  constructor(){
-    super();
-    this.state = {
-      selected: [0]
-    }
-  }
-
+  /* Update the state of the gallery based on the users click */
   onClick(id) {
-    this.setState({
-      selected: id
-    }, function (){
-      this.props.selectImage(id);
-    });
+    this.props.selectImage(id[0]);
   }
 
   render() {
+    // Create an array of JSX elements from our data to render later
     let previewSelects;
     if (this.props.gallery.images) {
+      /* Take our array of images and create JSX for each one */
       previewSelects = this.props.gallery.images.map(image => {
-        return (<div className={css(image[2] === this.state.selected[0] ? styles.active : styles.inactive,styles.choice)} onClick={this.onClick.bind(this,[image[2]])}><img className={css(styles.preview)} src={image[0]}/></div>);
+        return (<div
+                  className={
+                  /* CSS based on selected prop */
+                  css(image[2] === this.props.selected ? styles.active :
+                  styles.inactive,styles.choice)}
+                  /* onClick function */
+                  onClick={this.onClick.bind(this,[image[2]])}
+                >
+                  <img className={css(styles.preview)} src={image[0]}/>
+                </div>);
       });
     }
+
     return (
       <div className={css(styles.container)}>
         <div className={css(styles.text)}>
@@ -31,6 +33,7 @@ class GalleryPreviewSelect extends Component {
           <h3>{this.props.gallery.title}</h3>
         </div>
         <div className={css(styles.choices)}>
+          {/* Render our array of preview images here */}
           {previewSelects}
         </div>
       </div>
